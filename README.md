@@ -1,22 +1,12 @@
-# Appbook Project - Book Management System
+
+# Appbook
 
 ## Overview
-Appbook is a comprehensive book management and reader application built with PySide6. It provides user authentication, book browsing, purchasing, reading, and review capabilities.
-
-## Features
-- User authentication and registration
-- Admin panel for book and user management
-- Book browsing by category with search functionality
-- Book purchasing with discount management
-- Book reader with content display
-- User reviews and ratings system
-- User and admin notifications
-- Ban/unban user management
-- Category-based discount system
+This project contains 2 Python module(s) with 2 classes and 78 functions/methods.
 
 ## Project Structure
 
-### appbook\auth_db.py
+### appbook/auth_db.py
 **Classes:**
 - `AuthDatabase`
 
@@ -31,9 +21,14 @@ Appbook is a comprehensive book management and reader application built with PyS
 - `add_book()`
 - `get_all_books()`
 - `get_books_by_category()`
-- ... and 18 more methods
+- `delete_book()`
+- `set_category_discount()`
+- `get_category_discounts()`
+- `get_category_discount()`
+- `delete_category_discount()`
+- ... and 13 more methods
 
-### appbook\login_app.py
+### appbook/login_app.py
 **Classes:**
 - `LoginSignupApp`
 
@@ -48,87 +43,57 @@ Appbook is a comprehensive book management and reader application built with PyS
 - `create_user_purchases_page()`
 - `create_book_reader_page()`
 - `create_admin_dashboard_page()`
-- ... and 40 more methods
+- `create_admin_add_book_page()`
+- `create_admin_view_books_page()`
+- `create_admin_discount_page()`
+- `create_admin_user_management_page()`
+- `refresh_users_view()`
+- ... and 35 more methods
 
 ## Installation
 
 ```bash
-pip install PySide6
+pip install -r requirements.txt
 ```
 
 ## Usage
 
-Run the application:
-```bash
-python login_app.py
+To use this project:
+
+1. Install dependencies
+2. Import the modules in your code
+3. Use the classes and functions as needed
+
+## Example
+
+```python
+from auth_db import ...
+from login_app import ...
+
+# Use the imported classes/functions
 ```
 
-### Default Admin Credentials
-- Username: `admin`
-- Password: `admin123`
+## File Descriptions
 
-## Module Details
+### `appbook/auth_db.py`
+Provides:
+- 1 class(es)
+- 28 function(s)/method(s)
 
-### auth_db.py
-Database management module handling:
-- User authentication and registration
-- Book management (add, delete, search)
-- Purchase tracking and discount management
-- Reviews and notifications
-- User ban/unban functionality
+### `appbook/login_app.py`
+Provides:
+- 1 class(es)
+- 50 function(s)/method(s)
 
-### login_app.py
-Main UI application built with PySide6 providing:
-- Login and signup pages
-- User dashboard with book browsing
-- Admin dashboard with management tools
-- Book reader interface
-- Notification system
-- Review submission and display
+## Requirements
 
-## Database
-SQLite database (`users.db`) with tables:
-- `users` - User accounts and authentication
-- `books` - Book catalog
-- `purchases` - Purchase history
-- `category_discounts` - Discount settings
-- `reviews` - Book reviews and ratings
-- `notifications` - System notifications
+This project requires Python 3.7+
 
-## Key Features in Detail
+## Notes
 
-### User System
-- Create accounts with email and password
-- Login with credentials
-- User banning by admin
-- Role-based access (user/admin)
-
-### Admin Features
-- Add new books with content
-- Delete books
-- Manage category discounts
-- View and manage users
-- Ban/unban users
-- View books with reviews
-
-### User Features
-- Browse books by category
-- Search books
-- Purchase books
-- Read purchased books
-- Submit reviews and ratings
-- View notifications
-
-## Running the Application
-
-1. Ensure all dependencies are installed
-2. Run `python login_app.py`
-3. Login as admin (admin/admin123) or create a new account
-4. Explore the features
-
-## Database Schema
-The application automatically creates and initializes the SQLite database on first run.
-All tables are created with appropriate indexes and foreign key relationships.
+- Total modules: 2
+- Total classes: 2
+- Total functions: 78
 
 ---
-Generated automatically from project code structure.
+README generated automatically from project code structure.
